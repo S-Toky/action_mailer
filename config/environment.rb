@@ -12,6 +12,6 @@ ActionMailer::Base.smtp_settings = {
 :port => 587,
 :authentication => :plain,
 :enable_starttls_auto => true
-}
+},
 
 config.action_mailer.default_url_options = { :host => 'guarded-stream-82054.herokuapp.com' }
