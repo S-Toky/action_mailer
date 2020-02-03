@@ -4,12 +4,12 @@ require_relative 'application'
 # Initialize the Rails application.
 Rails.application.initialize!
 
-ActionMailer::Base.smtp_settings ={
-:address => 'smtp.gmail.com',
+ActionMailer::Base.smtp_settings = {
+:user_name => ENV['SENDGRID_LOGIN'],
+:password => ENV['SENDGRID_PWD'],
+:domain => 'http://guarded-stream-82054.herokuapp.com/',
+:address => 'smtp.sendgrid.net',
 :port => 587,
-:domain => 'gmail.com', #you can also use google.com
 :authentication => :plain,
-:user_name => ENV['GMAIL_LOGIN'],
-:password => ENV['GMAIL_PWD'],
 :enable_starttls_auto => true
 }
